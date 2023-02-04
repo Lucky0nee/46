@@ -2,14 +2,13 @@
 #include <vector>
 #include <chrono>
 #include <thread>
-
 using namespace std;
 
 class Class {
 public:
     // 0) конструктор, що створює об’єкт з пустим вектором
     Class() {
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < elements; i++)
             this->RandVector.push_back(NULL);
     }
     // 1) конструктор для заповнення елементів вектора випадковими цілими числами від 10 до 99 включно, всього 12 чисел;
@@ -19,7 +18,7 @@ public:
     }
     // 2) метод для виведення на екран дванадцяти елементів вектора у вигляді таблиці 4 на 3 протягом 20 секунд;
     void CoutRandVector(bool useTimer) {
-        const int time = 2;
+        const int time = 20;
         if (useTimer) {
             for (int i = 0; i < time; i++) {
                 for (int i = 0; i < elements; i++) {
